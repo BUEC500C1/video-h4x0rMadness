@@ -21,7 +21,7 @@ video-h4x0rMadness created by GitHub Classroom
 
         
 <p align="center">
-  <img width="700" height="400" src="/graphs/architecture.png">
+  <img width="600" height="300" src="/graphs/architecture.png">
 </p>
 
 
