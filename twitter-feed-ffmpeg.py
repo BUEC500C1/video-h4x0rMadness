@@ -92,9 +92,8 @@ class DailyFeed:
         try:
             # Create target Directory
             os.mkdir(dirName)
-            print("Directory ", dirName, " Created ")
         except FileExistsError:
-            print("Directory ", dirName, " already exists")
+            pass
         path = "./UniquePicturesFolder"
         os.chdir(path)
 
