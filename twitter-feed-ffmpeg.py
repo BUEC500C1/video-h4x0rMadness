@@ -10,11 +10,11 @@ from progress.bar import Bar
 import glob
 
 
-API_key = "sH7ldVlm3k9RhpJ8nC5bd4ksY"
-API_secret_key = "kAgGmzXD6ngdaWwDiZWfeEDkFYce5kHNhtTSP1Zq6fCgT3pNen"
+API_key = "your api key"
+API_secret_key = "your api secret key"
 
-Access_token = "1171844680603951104-IRA3NyRuOm7WBWeN2wxQXURZ1lE6GD"
-Access_token_secret = "QeKUCAdkerfuRTNL8vgfUWCFOWKNHmpFrOXhYInKH5vkV"
+Access_token = "your access token"
+Access_token_secret = "your access token secret"
 
 class DailyFeed:
     def __init__(self, API_key, API_secret_key, Access_token, Access_token_secret):
