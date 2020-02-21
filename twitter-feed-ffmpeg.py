@@ -8,23 +8,28 @@ from PIL import ImageDraw
 from threading import Thread
 from progress.bar import Bar
 import glob
+import configparser
 
-
-API_key = "your api key"
-API_secret_key = "your api secret key"
-
-Access_token = "your access token"
-Access_token_secret = "your access token secret"
 
 class DailyFeed:
-    def __init__(self, API_key, API_secret_key, Access_token, Access_token_secret):
-        self.api = self.authenticate(API_key, API_secret_key, Access_token, Access_token_secret)
+    def __init__(self, path):
+        self.api = self.authenticate(path)
         self.height = 700
         self.width = 400
         self.feed_number = 20
         self.q = queue.Queue()
         self.num_threads = 4
 
+
+    def authenticate(self, path):
+        config = configparser.ConfigParser()
+        config.read(path)
+        auth = tweepy.OAuthHandler(config.get('auth', 'consumer_key').strip(),
+                                   config.get('auth', 'consumer_secret').strip())
+        auth.set_access_token(config.get('auth', 'access_token').strip(),
+                              config.get('auth', 'access_secret').strip())
+        api = tweepy.API(auth)
+        return api
 
     def Start(self):
         self.msg = self.get_home_feed(self.api)
@@ -69,12 +74,6 @@ class DailyFeed:
         for item in range(self.feed_number):
             self.q.put(item)
         self.q.join()
-
-    def authenticate(self, API_key, API_secret_key, Access_token, Access_token_secret):
-        auth = tweepy.OAuthHandler(API_key, API_secret_key)
-        auth.set_access_token(Access_token, Access_token_secret)
-        api = tweepy.API(auth)
-        return api
 
     def get_home_feed(self, api):
         msg = []
@@ -148,5 +147,5 @@ class DailyFeed:
 
 
 if __name__ == '__main__':
-    obj = DailyFeed(API_key, API_secret_key, Access_token, Access_token_secret)
+    obj = DailyFeed("keys")
     obj.Start()
