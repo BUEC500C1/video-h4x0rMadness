@@ -1,0 +1,6 @@
+tweepy
+os
+ffmpeg
+queue
+glob
+configparser
