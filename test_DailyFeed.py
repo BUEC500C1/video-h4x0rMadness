@@ -172,7 +172,7 @@ class DailyFeed:
         ffmpeg.input(files, pattern_type='glob', framerate=0.3*self.num_threads).output('dailyfeed.mov').run()
 
 def test_method():
-    video_existence = os.path.exists("./dailyfeed.mov")
+    video_existence = os.path.exists("../dailyfeed.mov")
     pic_existence = os.path.exists("./0.png")
     assert video_existence == True
     assert pic_existence == False
