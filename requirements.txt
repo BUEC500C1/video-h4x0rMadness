@@ -1,6 +1,4 @@
-tweepy
 queue
 glob
 configparser
 json
-ffmpeg-python
