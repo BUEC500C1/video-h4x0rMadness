@@ -1,6 +1,6 @@
 tweepy
-ffmpeg-python
 queue
 glob
 configparser
 json
+ffmpeg-python
