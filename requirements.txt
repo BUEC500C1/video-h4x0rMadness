@@ -1,4 +1,3 @@
 queue
-glob
 configparser
 json
