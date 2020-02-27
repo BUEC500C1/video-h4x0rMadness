@@ -173,7 +173,7 @@ class DailyFeed:
 
 def test_method():
     
-    video_existence = os.path.exists("/home/runner/work/video-h4x0rMadness/video-h4x0rMadness/dailyfeed.mov")
+    video_existence = os.path.exists("/home/runner/work/video-h4x0rMadness/video-h4x0rMadness")
     pic_existence = os.path.exists("./0.png")
     assert video_existence == True
     assert pic_existence == False
