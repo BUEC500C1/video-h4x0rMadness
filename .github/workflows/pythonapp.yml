@@ -17,6 +17,7 @@ jobs:
       run: |
         pip install tweepy
         pip install ffmpeg-python
+        pip install Pillow
         python -m pip install --upgrade pip
     - name: Lint with flake8
       run: |
