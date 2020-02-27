@@ -1,5 +1,4 @@
 tweepy
-os
 ffmpeg
 queue
 glob
