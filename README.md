@@ -1,5 +1,5 @@
 # video-h4x0rMadness
-video-h4x0rMadness created by GitHub Classroom
+Twitter report to video summarizer - "DailyFeed"
 
 ## Function:
 
@@ -21,7 +21,7 @@ video-h4x0rMadness created by GitHub Classroom
 
         
 <p align="center">
-  <img width="600" height="300" src="/graphs/architecture.png">
+  <img src="/graphs/architecture.png" width="80%">
 </p>
 
 
@@ -32,23 +32,23 @@ video-h4x0rMadness created by GitHub Classroom
   2. texts being converted into images:
   
   <p align="center">
-  <img width="600" height="300" src="/graphs/images.png">
+  <img width="80%" src="/graphs/images.png">
 </p>
 
   <p align="center">
-  <img width="600" height="300" src="/graphs/19.png">
+  <img width="80%" src="/graphs/19.png">
 </p>
 
   3. images are converted into video and then images are deleted:
   
    <p align="center">
-  <img width="600" height="300" src="/graphs/video.png">
+  <img width="80%" src="/graphs/video.png">
 </p>
 
   4. user will see the progress bar in command line:
   
    <p align="center">
-  <img width="700" height="50" src="/graphs/progress.png">
+  <img width="80%" src="/graphs/progress.png">
 </p>
 
 
